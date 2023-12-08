@@ -1,1 +1,1 @@
-# Abhoermodul
+# Abhörmodul für Sennheiser-Empfänger
