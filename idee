@@ -1,0 +1,30 @@
+---Audiopfad----
+- Input über EBS 63P Klinkeneinbaubuchse, 6,3 mm, Stereo
+- 2-Polig durch C-Mos-Schalter (z.B. 74HCT 4066 4-fach-bidirektionaler Analogschalter, 2,0 - 6 V, DIP-14)
+- Sumenverstärker (Opa-Amp)
+- Kopfhörerverstärker (z.B. LM 386N-4, derhat einen Summenverstärkereingang) Poti für Lautstärke
+
+----Schalter mit Lämpchen----
+nicht direkt auf Platine sondern mit Kabel und Stecker zum auf die PLatine stecken. 3 Adern GND, V(Lämchen), Sens vom Taster
+
+---Solo steuern----
+A
+- je 2 (für+ und -) C-Mos-Schalter werden durch einen Attiny-Pin angesteuert. 
+- 8 Audiowege werden durch einen Attiny angesteuert                                                         (8 Outputs).
+- 8 Taster schalten die Audiowege                                                                           (8 Inputs)
+- Verbindung zu anderen ATTiny für Ausschalten der Audiowege dort                                           (1 IN/Out)
+- Kodierung über 4 Pins (4 Inputs mit NT 05 Dip-Schalter) (16 * 8 = 128 Wege)                               (4 Inputs)
+- I2C vom Lan                                                                                               (2 Pins, SCL, SDA)
+ATTiny braucht 22 IO-Pins pro ATTiny (z.B. ATTINY 828-AU < 2€, 28 I/O) ein Dip-Schalter (z.B. auch NT 08 Dip-Schalter, liegend, 8-polig), aber alle gleich programiert und gleiches Layout.
+Oder nicht 8 Kanäle auf einmal sondern nur 4: Größere Dipschalter, ATtiny mit Beinchen, mehr Platinen.
+- Ansteuerung der Attiny über Seriel, dafür müssen alle ATTiny verschieden programmiert werden wegen ID, aber Platinen werden alle Verschieden oder über Dip-Schalter.. (3 Pins) !!!!!NEIN!!!!!!
+
+B
+- je 2 (für+ und -) C-Mos-Schalter werden durch einen Attiny-Pin angesteuert (für 4 Audiowege: 8 Schalter). 
+- 4 Audiowege werden durch einen Attiny angesteuert                                                         (4 Outputs)
+- 4 Taster schalten die Audiowege                                                                           (4 Inputs)
+- 4 LEDs werden angesteuert                                                                                 (4 Outputs)
+- Verbindung zu anderen ATTiny für Ausschalten der Audiowege dort                                           (1 IN/Out)
+- Kodierung über 5 Pins (5 Inputs mit NT 05 Dip-Schalter, liegend, 5-polig) (32 * 4 = 128 Wege)             (5 Inputs)
+- I2C vom Lan                                                                                               (2 Pins, SCL, SDA)
+ATTiny braucht 20 IO-Pins pro ATTiny (z.B. ATTINY 828-AU < 2€, 28 I/O) ein Dip-Schalter (z.B. auch NT 08 Dip-Schalter, liegend, 8-polig), aber alle gleich programiert und gleiches Layout. 
