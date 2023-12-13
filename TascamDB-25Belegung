@@ -1,0 +1,26 @@
+Ch  Pin Funktion
+1  25  GND
+   12  Cold
+   24  Hot
+2  11  GND
+   23  Cold
+   10  Hot
+3  22  GND
+    9  Cold
+   21  Hot
+4   8  GND
+   20  Cold
+    7  Hot
+5  19  GND
+    6  Cold
+   18  Hot
+6   5  GND
+   17  Cold
+    4  Hot
+7  16  GND
+    3  Cold
+   15  Hot
+8   2  GND
+   14  Cold
+    1  Hot
+
